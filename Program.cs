@@ -11,21 +11,42 @@ namespace Basic
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to basic Core Programms");
-            Console.Write("Enter the value of N: ");
-            //VARIABLES
-            int N = Convert.ToInt32(Console.ReadLine());
-            int i = 1;
-            float nthHarmonicValue = 0;
+            Console.Write("Enter a number to get prime factors: ");
+            int primeFactorNumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(PrimeFactors(primeFactorNumber));
+        }
+        public static string PrimeFactors(int Number)
+        {
+            int i = 2;
+            string rv = "";
 
-            while (i <= N)
+            while (i*i < Number)
             {
-                Console.Write($"1/{i} + ");
-                nthHarmonicValue += 1 / (float)i;
+                if (Number % i == 0)
+                {
+                    int n = 2;
+                    int flag = 0;
+                    while (n < i)
+                    {
+                        if (i % n == 0)
+                        {
+                            flag = 1;
+                            break;
+                        }
+                        else
+                        {
+                            flag = 0;
+                        }
+                        n++;
+                    }
+                    if (flag == 0)
+                    {
+                        rv = $"{Convert.ToString(i)} {rv}";
+                    }
+                }
                 i++;
             }
-            Console.WriteLine($"\n{nthHarmonicValue}");
+            return rv;
         }
-
     }
-    
 }
