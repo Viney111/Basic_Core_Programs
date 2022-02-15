@@ -11,39 +11,15 @@ namespace Basic
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to basic Core Programms");
-            LeapYear Y1 = new LeapYear(1500);
-            Y1.CheckLeapYear();
-        }
-    }
-    public class LeapYear
-    {
-        public int year;
-
-        public LeapYear(int year)
-        {
-            this.year = year;
-        }
-        public void CheckLeapYear()
-        {
-            if (year > 1000)
+            Console.Write("Enter the vallue of N: ");
+            //VARIABLES
+            int N = Convert.ToInt32(Console.ReadLine());
+            int i = 1;
+            while (i <= N)
             {
-
-                if (year % 400 == 0 && year % 100 == 0)
-                {
-                    Console.WriteLine($"{year} is a leap year");
-                }
-                else if (year % 4 == 0 && year % 100 != 0)
-                {
-                    Console.WriteLine($"{year} is a leap year");
-                }
-                else
-                {
-                    Console.WriteLine($"{year} is not a leap year");
-                }
-            }
-            else
-            {
-                Console.WriteLine("Please enter a four digit Number");
+                double result = Math.Pow(2, i);
+                Console.WriteLine(result);
+                i++;
             }
         }
 
