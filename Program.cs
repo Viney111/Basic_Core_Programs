@@ -11,16 +11,16 @@ namespace Basic
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to basic Core Programms");
+            Console.Write("Enter 1st number: ");
+            int number1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter 2nd number: ");
+            int number2 = Convert.ToInt32(Console.ReadLine());
+            int x;
+            x = number1;
+            number1 = number2;  
+            number2 = x;
+            Console.WriteLine($"Numbers after swapping:-\nnumber1:{number1} & number2: {number2}");
 
-            Console.Write("Enter a number to get quotient & reminder: ");
-            int number = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter a number by which Number is to be divide: ");
-            int dividingNumber = Convert.ToInt32(Console.ReadLine());
-
-            int quotient = number / dividingNumber;
-            int reminder = number % dividingNumber;
-
-            Console.WriteLine($"The quotient is {quotient} & the reminder is {reminder}");
         }
     }
 }
