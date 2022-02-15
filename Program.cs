@@ -11,11 +11,22 @@ namespace Basic
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to basic Core Programms");
-            Console.Write("Enter the number: ");
+            Console.Write("Enter the alphabet: ");
             //VARIABLES
-            int number = Convert.ToInt32(Console.ReadLine());
-            string result = number % 2 == 0 ? "Number is even" : "Number is odd";
-            Console.WriteLine(result);
+            char word = Convert.ToChar(Console.ReadLine().ToUpper());
+            switch (word)
+            {
+                case 'A':
+                case 'E':
+                case 'I':
+                case 'O':
+                case 'U':
+                    Console.WriteLine("This is a vowel alphabet");
+                    break;
+                default:
+                    Console.WriteLine("This is a consonant");
+                    break;
+            }
         }
     }
 }
